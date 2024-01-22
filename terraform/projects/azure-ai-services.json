@@ -3,7 +3,8 @@
     "description": "Experimenting with Azure AI services.",
     "github": {
         "topics": [
-            "Azure AI Services"
+            "azure",
+            "azure-ai-services"
         ]
     }
 }
