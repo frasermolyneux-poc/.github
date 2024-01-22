@@ -4,7 +4,8 @@
     "github": {
         "topics": [
             "azure",
-            "azure-ai-services"
+            "azure-ai-services",
+            "terraform"
         ]
     }
 }
