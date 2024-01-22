@@ -1,0 +1,15 @@
+{
+    "name": "test1",
+    "description": "This is a test repository",
+    "github": {
+        "visibility": "public",
+        "has_downloads": true,
+        "has_issues": true,
+        "has_projects": true,
+        "has_wiki": true,
+        "topics": [
+            "topic1",
+            "topic2"
+        ]
+    }
+}
