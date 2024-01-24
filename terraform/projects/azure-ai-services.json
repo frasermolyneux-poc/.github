@@ -7,5 +7,10 @@
             "azure-ai-services",
             "terraform"
         ]
-    }
+    },
+    "environments": [
+        {
+            "name": "dev"
+        }
+    ]
 }
