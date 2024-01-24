@@ -1,4 +1,5 @@
 {
     "name": "github-advanced-security",
-    "description": "A sample repository for demo'ing some GitHub Advanced Security features"
+    "description": "A sample repository for demo'ing some GitHub Advanced Security features",
+    "github": {}
 }
