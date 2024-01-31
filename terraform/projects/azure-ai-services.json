@@ -10,7 +10,12 @@
     },
     "environments": [
         {
-            "name": "dev"
+            "name": "dev",
+            "azure_tenant": "molyneuxio"
+        },
+        {
+            "name": "test",
+            "azure_tenant": "mngenv102652"
         }
     ]
 }

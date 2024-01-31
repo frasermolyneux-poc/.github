@@ -14,16 +14,18 @@ locals {
       has_wiki      = lookup(content.github, "has_wiki", false)
     } : null,
     environments = [for environment in lookup(content, "environments", []) : {
-      name = environment.name
+      name         = environment.name
+      azure_tenant = lookup(environment, "azure_tenant", null)
     }]
   }]
 
   project_environments = flatten([
     for project in local.projects : [
       for environment in project.environments : {
-        key         = format("%s-%s", project.name, environment.name)
-        project     = project.name
-        environment = environment.name
+        key          = format("%s-%s", project.name, environment.name)
+        project      = project.name
+        environment  = environment.name
+        azure_tenant = environment.azure_tenant
       }
     ]
   ])
