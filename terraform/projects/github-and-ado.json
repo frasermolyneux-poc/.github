@@ -1,4 +1,5 @@
 {
     "name": "github-and-ado",
-    "description": "This repository is used for demo'ing GitHub and Azure DevOps integration."
+    "description": "This repository is used for demo'ing GitHub and Azure DevOps integration.",
+    "github": {}
 }
