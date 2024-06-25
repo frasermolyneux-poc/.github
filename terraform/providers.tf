@@ -15,9 +15,9 @@ terraform {
   backend "azurerm" {}
 }
 
-//provider "azurerm" {
-//  features {}
-//}
+provider "azurerm" {
+  features {}
+}
 
 provider "azurerm" {
   alias = "molyneuxio"
