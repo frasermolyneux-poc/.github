@@ -21,7 +21,7 @@ To configure this project and relevant permissions the following manual steps ha
 * An environment has been created within the repository named `Production`
 * The application configuration for a service principal has been created in [frasermolyneux/platform-workloads](https://github.com/frasermolyneux/platform-workloads/blob/main/terraform/poc_management.tf).
   * The following secrets have then been set in the `Production` environment:
-    * `AZURE_TENANT_ID` - The Molyneux.IO tenant ID
-    * `AZURE_CLIENT_ID` - The application (client) ID from the `spn-frasermolyneux-poc-production` application
-    * `AZURE_SUBSCRIPTION_ID` - The subscription ID for the `sub-visualstudio-enterprise` subscription where the Terraform state file is stored.
+    * `AZURE_TENANT_ID` - The MngEnv250956 tenant ID
+    * `AZURE_CLIENT_ID` - The application (client) ID from the `spn-github-frasermolyneux-poc-production` application
+    * `AZURE_SUBSCRIPTION_ID` - The subscription ID for the `ME-MngEnv250956-fmolyneux-1` subscription where the Terraform state file is stored.
     * `TERRAFORM_GITHUB_TOKEN` - A PAT for GitHub to allow management of the repositories

@@ -1,7 +1,7 @@
-tenant_id            = "e56a6947-bb9a-4a6e-846a-1f118d1c3a14"
-subscription_id      = "d68448b0-9947-46d7-8771-baa331a3063a"
-resource_group_name  = "rg-tf-poc-uksouth"
-storage_account_name = "sa8dhjhrbn34mslpr"
+tenant_id            = "e9a0fc08-a9f9-413f-a6bd-a309dee590a5"
+subscription_id      = "1422ae86-60a7-4f13-b4e0-88098ab7d836"
+resource_group_name  = "rg-frasermolyneux-poc-tfstate"
+storage_account_name = "sahggjhgjh43rhhr34"
 container_name       = "tfstate"
-key                  = "aais-terraform.tfstate"
+key                  = "terraform.tfstate"
 use_azuread_auth     = true
