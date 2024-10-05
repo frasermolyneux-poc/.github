@@ -22,7 +22,8 @@
     },
     "environments": [
         {
-            "name": "poc"
+            "name": "poc",
+            "configure_terraform_state": true
         }
     ]
 }
