@@ -1,0 +1,28 @@
+{
+    "name": "az-functions-secure-config",
+    "description": "Azure function with secure configuration; private endpoints, managed identity, and Key Vault integration",
+    "github": {
+        "visibility": "public",
+        "has_downloads": false,
+        "has_issues": false,
+        "has_projects": false,
+        "has_wiki": false,
+        "topics": [
+            "azure",
+            "terraform",
+            "functions",
+            "key-vault",
+            "managed-identity"
+        ],
+        "template": {
+            "owner": "frasermolyneux-poc",
+            "repository": "poc-template-azure-terraform"
+        }
+    },
+    "environments": [
+        {
+            "name": "poc",
+            "configure_terraform_state": true
+        }
+    ]
+}
