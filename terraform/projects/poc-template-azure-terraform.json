@@ -10,7 +10,8 @@
         "topics": [
             "azure",
             "terraform"
-        ]
+        ],
+        "is_template": true
     },
     "environments": [
         {

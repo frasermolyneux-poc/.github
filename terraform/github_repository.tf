@@ -16,4 +16,6 @@ resource "github_repository" "repository" {
 
   allow_auto_merge       = true
   delete_branch_on_merge = true
+
+  is_template = each.value.github.is_template
 }

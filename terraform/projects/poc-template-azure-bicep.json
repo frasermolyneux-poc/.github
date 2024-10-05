@@ -10,7 +10,8 @@
         "topics": [
             "azure",
             "bicep"
-        ]
+        ],
+        "is_template": true
     },
     "environments": [
         {
