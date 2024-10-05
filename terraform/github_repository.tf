@@ -22,8 +22,8 @@ resource "github_repository" "repository" {
   dynamic "template" {
     for_each = each.value.github.template != null ? [each.value.github.template] : []
     content {
-      owner      = setting.value["owner"]
-      repository = setting.value["repository"]
+      owner      = each.value["owner"]
+      repository = each.value["repository"]
     }
   }
 }
