@@ -11,7 +11,7 @@ resource "github_actions_environment_secret" "client_id" {
   repository      = github_repository.repository[each.value.project].name
   environment     = github_repository_environment.environment[each.key].environment
   secret_name     = "AZURE_CLIENT_ID"
-  plaintext_value = azuread_application.principal[each.key].application_id
+  plaintext_value = azuread_application.principal[each.key].client_id
 }
 
 resource "github_actions_environment_secret" "subscription_id" {
