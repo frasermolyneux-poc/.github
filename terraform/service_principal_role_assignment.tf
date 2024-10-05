@@ -15,6 +15,8 @@ resource "azurerm_role_assignment" "kv_admin" {
 }
 
 resource "azurerm_role_assignment" "rbac_admin" {
+  for_each = { for each in local.project_environments : each.key => each }
+
   role_definition_name = "Role Based Access Control Administrator"
   scope                = data.azurerm_subscription.subscription.id
   principal_id         = azuread_service_principal.principal[each.value.key].object_id
