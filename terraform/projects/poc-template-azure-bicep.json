@@ -11,5 +11,10 @@
             "azure",
             "bicep"
         ]
-    }
+    },
+    "environments": [
+        {
+            "name": "poc"
+        }
+    ]
 }

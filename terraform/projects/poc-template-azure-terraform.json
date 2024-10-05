@@ -11,5 +11,11 @@
             "azure",
             "terraform"
         ]
-    }
+    },
+    "environments": [
+        {
+            "name": "poc",
+            "configure_terraform_state": true
+        }
+    ]
 }
