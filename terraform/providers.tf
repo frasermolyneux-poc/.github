@@ -12,9 +12,13 @@ terraform {
 }
 
 provider "azurerm" {
+  subscription_id = var.subscription_id
+
   features {}
+
+  storage_use_azuread = true
 }
 
 provider "github" {
-  owner = "frasermolyneux-poc"
+  owner = var.github_org
 }

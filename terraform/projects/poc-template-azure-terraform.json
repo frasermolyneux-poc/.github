@@ -1,6 +1,6 @@
 {
-    "name": "test1",
-    "description": "This is a test repository",
+    "name": "poc-template-azure-terraform",
+    "description": "This is a template for creating a new project in Azure using Terraform",
     "github": {
         "visibility": "public",
         "has_downloads": true,
@@ -8,8 +8,8 @@
         "has_projects": true,
         "has_wiki": true,
         "topics": [
-            "topic1",
-            "topic2"
+            "azure",
+            "terraform"
         ]
     }
 }

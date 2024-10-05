@@ -1,0 +1,15 @@
+{
+    "name": "poc-template-azure-bicep",
+    "description": "This is a template for creating a new project in Azure using Bicep",
+    "github": {
+        "visibility": "public",
+        "has_downloads": true,
+        "has_issues": false,
+        "has_projects": true,
+        "has_wiki": false,
+        "topics": [
+            "azure",
+            "bicep"
+        ]
+    }
+}
