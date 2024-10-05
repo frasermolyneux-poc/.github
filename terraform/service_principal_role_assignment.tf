@@ -6,6 +6,14 @@ resource "azurerm_role_assignment" "contributor" {
   principal_id         = azuread_service_principal.principal[each.value.key].object_id
 }
 
+resource "azurerm_role_assignment" "kv_admin" {
+  for_each = { for each in local.project_environments : each.key => each }
+
+  scope                = data.azurerm_subscription.subscription.id
+  role_definition_name = "Key Vault Administrator"
+  principal_id         = azuread_service_principal.principal[each.value.key].object_id
+}
+
 resource "azurerm_role_assignment" "terraform_state_account_key_operator" {
   for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true }
 
