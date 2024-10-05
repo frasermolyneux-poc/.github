@@ -1,0 +1,28 @@
+{
+    "name": "az-sql-multi-region-cmk",
+    "description": "Azure sql multi region with customer managed key using Key Vault premium and HSM-protected keys",
+    "github": {
+        "visibility": "public",
+        "has_downloads": true,
+        "has_issues": false,
+        "has_projects": true,
+        "has_wiki": false,
+        "topics": [
+            "azure",
+            "terraform",
+            "sql",
+            "multi-region",
+            "key-vault",
+            "hsm-protected"
+        ],
+        "template": {
+            "owner": "frasermolyneux-poc",
+            "repository": "poc-template-azure-terraform"
+        }
+    },
+    "environments": [
+        {
+            "name": "poc"
+        }
+    ]
+}

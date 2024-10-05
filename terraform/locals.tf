@@ -12,7 +12,11 @@ locals {
       has_issues    = lookup(content.github, "has_issues", false)
       has_projects  = lookup(content.github, "has_projects", false)
       has_wiki      = lookup(content.github, "has_wiki", false)
-      is_template   = lookup(content.github, "is_template", false)
+      is_template   = lookup(content.github, "is_template", false),
+      template = lookup(content.github, "template", null) != null ? {
+        owner      = lookup(content.github.template, "owner", null)
+        repository = lookup(content.github.template, "repository", null)
+      } : null
     } : null,
     environments = [for environment in lookup(content, "environments", []) : {
       name                      = environment.name,

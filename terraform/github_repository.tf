@@ -18,4 +18,12 @@ resource "github_repository" "repository" {
   delete_branch_on_merge = true
 
   is_template = each.value.github.is_template
+
+  dynamic "template" {
+    for_each = each.value.github.template != null ? [each.value.github.template] : []
+    content {
+      owner      = setting.value["owner"]
+      repository = setting.value["repository"]
+    }
+  }
 }
