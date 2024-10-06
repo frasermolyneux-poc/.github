@@ -23,7 +23,10 @@
     "environments": [
         {
             "name": "poc",
-            "configure_terraform_state": true
+            "configure_terraform_state": true,
+            "vnet_spoke": {
+                "address_space": "10.200.8.0/21"
+            }
         }
     ]
 }

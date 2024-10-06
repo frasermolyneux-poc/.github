@@ -20,7 +20,10 @@ locals {
     } : null,
     environments = [for environment in lookup(content, "environments", []) : {
       name                      = environment.name,
-      configure_terraform_state = lookup(environment, "configure_terraform_state", false)
+      configure_terraform_state = lookup(environment, "configure_terraform_state", false),
+      vnet_spoke = lookup(environment, "vnet_spoke", null) != null ? {
+        address_space = environment.vnet_spoke.address_space
+      } : null
     }]
   }]
 
@@ -31,6 +34,7 @@ locals {
         project                   = project.name
         environment               = environment.name
         configure_terraform_state = environment.configure_terraform_state
+        vnet_spoke                = environment.vnet_spoke
       }
     ]
   ])

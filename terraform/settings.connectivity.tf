@@ -13,7 +13,21 @@ locals {
             bgp_community                = ""
             subnets                      = []
             virtual_network_gateway = {
-              enabled = false
+              enabled = true
+              config = {
+                address_prefix           = "10.100.1.0/24"
+                gateway_sku_expressroute = ""
+                gateway_sku_vpn          = "VpnGw2AZ"
+                advanced_vpn_settings = {
+                  enable_bgp                       = null
+                  active_active                    = null
+                  private_ip_address_allocation    = ""
+                  default_local_network_gateway_id = ""
+                  vpn_client_configuration         = []
+                  bgp_settings                     = []
+                  custom_route                     = []
+                }
+              }
             }
             azure_firewall = {
               enabled = false
