@@ -1,7 +1,3 @@
-data "azurerm_client_config" "current" {}
-
-data "azuread_client_config" "current" {}
-
 // This resource provides a unique id for the environment per environment instance (e.g. per creation of a new state file)
 // The value of this should be appended to all names that are required to be globally unique to prevent naming conflicts.
 resource "random_id" "environment_id" {
