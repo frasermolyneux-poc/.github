@@ -6,6 +6,5 @@ location = "uksouth"
 
 tags = {
   Environment = "poc",
-  DeployedBy  = "GitHub-Terraform",
   Git         = "https://github.com/frasermolyneux-poc/.github"
 }

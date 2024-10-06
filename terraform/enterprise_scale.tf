@@ -13,6 +13,7 @@ module "enterprise_scale" {
   root_id        = "MngEnv250956"
   root_name      = "MngEnv250956"
 
-  deploy_connectivity_resources = true
-  subscription_id_connectivity  = data.azurerm_client_config.current.subscription_id
+  deploy_connectivity_resources    = true
+  subscription_id_connectivity     = data.azurerm_client_config.current.subscription_id
+  configure_connectivity_resources = local.configure_connectivity_resources
 }
