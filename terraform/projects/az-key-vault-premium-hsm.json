@@ -1,0 +1,27 @@
+{
+    "name": "az-key-vault-premium-hsm",
+    "description": "Azure Key Vault Premium with HSM-protected keys",
+    "github": {
+        "visibility": "public",
+        "has_downloads": false,
+        "has_issues": false,
+        "has_projects": false,
+        "has_wiki": false,
+        "topics": [
+            "azure",
+            "terraform",
+            "key-vault",
+            "hsm-protected"
+        ],
+        "template": {
+            "owner": "frasermolyneux-poc",
+            "repository": "poc-template-azure-terraform"
+        }
+    },
+    "environments": [
+        {
+            "name": "poc",
+            "configure_terraform_state": true
+        }
+    ]
+}
