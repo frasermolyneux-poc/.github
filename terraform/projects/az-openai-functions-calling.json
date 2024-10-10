@@ -1,0 +1,15 @@
+{
+    "name": "az-openai-functions-calling",
+    "description": "Python examples of azure functions calling",
+    "github": {
+        "visibility": "public",
+        "has_downloads": false,
+        "has_issues": false,
+        "has_projects": false,
+        "has_wiki": false,
+        "topics": [
+            "azure",
+            "openai"
+        ]
+    }
+}
