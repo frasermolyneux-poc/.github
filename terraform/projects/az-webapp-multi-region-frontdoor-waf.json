@@ -1,0 +1,29 @@
+{
+    "name": "az-webapp-multi-region-frontdoor-waf",
+    "description": "Azure web app with multi-region configuration using Azure Front Door and a WAF",
+    "github": {
+        "visibility": "public",
+        "has_downloads": false,
+        "has_issues": false,
+        "has_projects": false,
+        "has_wiki": false,
+        "topics": [
+            "azure",
+            "terraform",
+            "webapp",
+            "multi-region",
+            "front-door",
+            "waf"
+        ],
+        "template": {
+            "owner": "frasermolyneux-poc",
+            "repository": "poc-template-azure-terraform"
+        }
+    },
+    "environments": [
+        {
+            "name": "poc",
+            "configure_terraform_state": true
+        }
+    ]
+}
