@@ -28,3 +28,16 @@ resource "github_repository" "repository" {
     }
   }
 }
+
+resource "github_branch_protection" "main_protection" {
+  for_each = { for each in local.projects : each.name => each if each.github != null }
+
+  repository_id = github_repository.repository[each.value.name].node_id
+
+  pattern = "main"
+
+  required_status_checks {
+    strict   = false
+    contexts = ["Pull Request Validation"]
+  }
+}
