@@ -29,15 +29,36 @@ resource "github_repository" "repository" {
   }
 }
 
-resource "github_branch_protection" "main_protection" {
+resource "github_repository_ruleset" "main_protection" {
   for_each = { for each in local.projects : each.name => each if each.github != null }
 
-  repository_id = github_repository.repository[each.value.name].node_id
+  name       = "main"
+  repository = github_repository.repository[each.value.name].name
 
-  pattern = "main"
+  target      = "branch"
+  enforcement = "active"
 
-  required_status_checks {
-    strict   = false
-    contexts = ["Pull Request Validation"]
+  conditions {
+    ref_name {
+      include = ["~ALL"]
+      exclude = []
+    }
+  }
+
+  rules {
+    creation                = true
+    update                  = true
+    deletion                = true
+    required_linear_history = true
+    required_signatures     = true
+
+    required_status_checks {
+      required_check {
+        context        = "terraform-plan-poc"
+        integration_id = 1
+      }
+
+      strict_required_status_checks_policy = true
+    }
   }
 }
