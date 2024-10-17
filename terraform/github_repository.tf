@@ -40,7 +40,10 @@ resource "github_repository_ruleset" "main_protection" {
 
   conditions {
     ref_name {
-      include = ["~ALL"]
+      include = [
+        "refs/heads/main",
+        "~DEFAULT_BRANCH"
+      ]
       exclude = []
     }
   }
@@ -49,10 +52,16 @@ resource "github_repository_ruleset" "main_protection" {
     required_status_checks {
       required_check {
         context        = "terraform-plan-poc"
-        integration_id = 1
+        integration_id = 15368
       }
 
       strict_required_status_checks_policy = true
     }
+  }
+
+  bypass_actors {
+    actor_id    = 5
+    actor_type  = "RepositoryRole"
+    bypass_mode = "always"
   }
 }
