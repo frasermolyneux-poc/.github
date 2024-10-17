@@ -11,7 +11,14 @@ locals {
             link_to_ddos_protection_plan = false
             dns_servers                  = []
             bgp_community                = ""
-            subnets                      = []
+            subnets = [
+              {
+                name = "GitHubRunners"
+                address_prefixes = [
+                  "10.100.2.0/24"
+                ]
+              }
+            ]
             virtual_network_gateway = {
               enabled = true
               config = {
