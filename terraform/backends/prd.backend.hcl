@@ -4,4 +4,5 @@ resource_group_name  = "rg-frasermolyneux-poc-tfstate"
 storage_account_name = "sahggjhgjh43rhhr34"
 container_name       = "tfstate"
 key                  = "terraform.tfstate"
+use_oidc             = true
 use_azuread_auth     = true
