@@ -1,5 +1,5 @@
 resource "github_dependabot_secret" "client_id" {
-  for_each = { for each in local.project_environments : each.key => each if each.value.environment == "poc" }
+  for_each = { for each in local.project_environments : each.key => each if each.environment == "poc" }
 
   repository      = github_repository.repository[each.value.project].name
   secret_name     = "AZURE_CLIENT_ID"
@@ -7,7 +7,7 @@ resource "github_dependabot_secret" "client_id" {
 }
 
 resource "github_dependabot_secret" "subscription_id" {
-  for_each = { for each in local.project_environments : each.key => each if each.value.environment == "poc" }
+  for_each = { for each in local.project_environments : each.key => each if each.environment == "poc" }
 
   repository      = github_repository.repository[each.value.project].name
   secret_name     = "AZURE_SUBSCRIPTION_ID"
@@ -15,7 +15,7 @@ resource "github_dependabot_secret" "subscription_id" {
 }
 
 resource "github_dependabot_secret" "tenant_id" {
-  for_each = { for each in local.project_environments : each.key => each if each.value.environment == "poc" }
+  for_each = { for each in local.project_environments : each.key => each if each.environment == "poc" }
 
   repository      = github_repository.repository[each.value.project].name
   secret_name     = "AZURE_TENANT_ID"
@@ -23,7 +23,7 @@ resource "github_dependabot_secret" "tenant_id" {
 }
 
 resource "github_dependabot_secret" "tf_backend_subscription_id" {
-  for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true && each.value.environment == "poc" }
+  for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true && each.environment == "poc" }
 
   repository      = github_repository.repository[each.value.project].name
   secret_name     = "tf_backend_subscription_id"
@@ -31,7 +31,7 @@ resource "github_dependabot_secret" "tf_backend_subscription_id" {
 }
 
 resource "github_dependabot_secret" "tf_backend_resource_group_name" {
-  for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true && each.value.environment == "poc" }
+  for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true && each.environment == "poc" }
 
   repository      = github_repository.repository[each.value.project].name
   secret_name     = "tf_backend_resource_group_name"
@@ -39,7 +39,7 @@ resource "github_dependabot_secret" "tf_backend_resource_group_name" {
 }
 
 resource "github_dependabot_secret" "tf_backend_storage_account_name" {
-  for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true && each.value.environment == "poc" }
+  for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true && each.environment == "poc" }
 
   repository      = github_repository.repository[each.value.project].name
   secret_name     = "tf_backend_storage_account_name"
@@ -47,7 +47,7 @@ resource "github_dependabot_secret" "tf_backend_storage_account_name" {
 }
 
 resource "github_dependabot_secret" "tf_backend_container_name" {
-  for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true && each.value.environment == "poc" }
+  for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true && each.environment == "poc" }
 
   repository      = github_repository.repository[each.value.project].name
   secret_name     = "tf_backend_container_name"
@@ -55,7 +55,7 @@ resource "github_dependabot_secret" "tf_backend_container_name" {
 }
 
 resource "github_dependabot_secret" "tf_backend_key" {
-  for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true && each.value.environment == "poc" }
+  for_each = { for each in local.project_environments : each.key => each if each.configure_terraform_state == true && each.environment == "poc" }
 
   repository      = github_repository.repository[each.value.project].name
   secret_name     = "tf_backend_key"
